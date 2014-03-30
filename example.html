@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>watch.js Example</title>
+        <meta charset="UTF-8">
+        <script type="application/javascript" src="watch.min.js"></script>
+    </head>
+    <body>
+
+        <p>
+            This example creates a JavaScript object and watches it. The buttons below allow you to add and remove properties to and from the object.
+            If a change is detected an alert will pop. Check the console to observe the changing values of the object.
+        </p>
+
+        <p>
+            <button onclick="obj.alpha = 'alpha';">obj.alpha = 'alpha';</button>
+            <button onclick="delete obj.alpha;">delete obj.alpha;</button>
+            <button onclick="obj.child.beta = 'beta';">obj.child.beta = 'beta';</button>
+            <button onclick="delete obj.child.beta;">delete obj.child.beta;</button>
+        </p>
+
+        <script type="application/javascript">
+
+            var obj = {
+                child: {}
+            };
+            obj.watch(onChange);
+            
+            console.log(JSON.stringify(obj));
+            
+            function onChange() {
+                alert("Changed!");
+                console.log(JSON.stringify(this));
+            }
+            
+        </script>
+
+    </body>
+</html>

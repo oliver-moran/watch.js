@@ -1,0 +1,28 @@
+{
+  "name": "watch.js",
+  "main": "watch.min.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/oliver-moran/watch.js",
+  "authors": [
+    "Oliver Moran <oliver.moran@gmail.com>"
+  ],
+  "description": "Extends the JavaScript Object prototype to observe when an object is changed.",
+  "keywords": [
+    "javascript",
+    "object",
+    "observe",
+    "observer",
+    "watch",
+    "watcher",
+    "change",
+    "onchange"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
